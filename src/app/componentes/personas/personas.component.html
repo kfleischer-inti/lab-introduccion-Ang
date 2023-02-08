@@ -1,0 +1,15 @@
+<div class="personas">
+  <h3> Esta es nuestra lista de personas!</h3>
+  <!-- mostramos una lista de personas usando la directiva de angular *ngFOR -->
+  <!-- <div *ngFor="let persona of personas">
+    <h4>Nueva Persona</h4>
+    <p>Nombre: {{persona.nombre}}</p>
+    <p>Apellido: {{persona.apellido}}</p>
+    <p>Edad: {{persona.edad}}</p>
+  </div> -->
+  <div *ngFor="let persona of personas">
+    <!-- usamos los corchetes [persona] para indicar que ese elemento será “pasado” a su componente hijo -->
+    <app-persona [persona]="persona" (deletePersona)="borrarPersonadeLista($event)"></app-persona>
+    </div>
+
+</div>
